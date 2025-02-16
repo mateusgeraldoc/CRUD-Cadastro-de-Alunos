@@ -1,7 +1,8 @@
 # Projeto de Cadastro de Alunos - CRUD
 
 Este projeto tem como objetivo criar uma aplicação simples de CRUD (Create, Read, Update, Delete) para o cadastro de alunos em uma escola. O sistema permite registrar, visualizar, editar e excluir dados dos alunos.
-Requisitos
+
+## Requisitos
 
 ### Para rodar o projeto, você precisa ter o seguinte instalado em seu computador:
 
