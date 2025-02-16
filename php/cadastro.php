@@ -28,8 +28,27 @@
             </div>
             <div class="input-container">
                 <select name="Cod_Turma">
+                    <?php
+                    ini_set('display_errors', 1);
+                    ini_set('display_startup_errors', 1);
+                    error_reporting(E_ALL);
 
+                    include_once('conexao.php');
 
+                    if (!$conexao) {
+                        die("Falha na conexão: " . mysqli_connect_error());
+                    }
+
+                    $consulta=mysqli_query($conexao, "SELECT Cod_Turma as codigo, Nome_Turma as turma FROM Turma");
+
+                    if (!$consulta) {
+                        die("Erro na consulta: " . mysqli_error($conexao));
+                    }
+
+                    while($linha = mysqli_fetch_array($consulta)){
+                        echo "<option value='" .$linha['codigo']. "'>" .$linha['turma']. "</option>";
+                    }
+                    ?>
                 </select>
             </div>
             <button class="submit-button" type="submit">Concluir</button>
