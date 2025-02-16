@@ -2,8 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300px;
+    font-style: normal;
+      
 }
-
 body{
     background-image: url(./img/escola.jpg);
     background-size: cover; /*cobre toda a tela com a imagem*/
@@ -14,25 +18,73 @@ body{
     align-items: center; /*alinhamento vertical*/
 }
 
+
 .container{
-    border: 2px solid black;
-    background-color: transparent;
-    backdrop-filter: blur(15px);
-    width: 420px;
+    border: 2px solid rgb(255, 255, 255, 0.20);
+    background-color: rgba(70, 70, 70, 0.986);
+    width: 500px;
     padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
 h1{
-    font-size: 360px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2.3em;
 }
 
 .input-container{
+    position: relative;
     width: 100%;
-    border: none;
-
+    height: 50px;
+    margin: 30px 0;
 }
 
 .input-container input{
-    width: 300px;
+    width: 100%; 
+    height: 100%;
     border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    color: white;
+    font-size: 1.3em;
+}
+
+.input-container input:hover{
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.input-container input::placeholder{
+    color: white;
+    font-size: 20px;
+}
+.input-container input::placeholder:hover{
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.input-container img{
+    position: absolute;
+    right: 15px;
+    top: 25%;
+    width: 25px;
+}
+
+.submit-button{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.submit-button:hover{
+    cursor: pointer;
+    background-color: rgb(233, 233, 233);
 }
