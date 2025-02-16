@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Alunos - CRUD</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Consulta</title>
+    <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -12,13 +12,18 @@
 <body>
     <div class="container">
         <form action="cadastro.php">
-            <h1>MENU</h1>
-            <div class="option-container">
-                <a href="./html/cadastro.html"><p>CADASTRO</p></a>
+            <a href="../index.html"><img width="30px" style="opacity: 30%;" src="../img/seta-voltar.png"></a>
+            <h1>Consulta</h1>
+            <div class="input-container">
+                <select name="turma">
+                    <option value="" disabled selected>Turma...</option>
+
+
+
+                    
+                </select>
             </div>
-            <div class="option-container">
-                <a href="./html/consulta.html"><p>CONSULTA</p></a>
-            </div>
+            <button class="submit-button" type="submit">Concluir</button>
         </form>
     </div>
 </body>
