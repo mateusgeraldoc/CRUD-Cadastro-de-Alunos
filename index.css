@@ -1,0 +1,38 @@
+*{ /*ajuste de borda*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./img/escola.jpg);
+    background-size: cover; /*cobre toda a tela com a imagem*/
+    background-position: center; /*posiciona no centro da imagem*/
+    min-height: 100vh; /*cobre 100% da altura da tela*/
+    display: flex; 
+    justify-content: center; /*alinhamento horizontal*/
+    align-items: center; /*alinhamento vertical*/
+}
+
+.container{
+    border: 2px solid black;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    width: 420px;
+    padding: 30px 40px;
+}
+
+h1{
+    font-size: 360px;
+}
+
+.input-container{
+    width: 100%;
+    border: none;
+
+}
+
+.input-container input{
+    width: 300px;
+    border: none;
+}
