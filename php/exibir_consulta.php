@@ -13,6 +13,7 @@
     <div class="container">
     <a href="consulta.php"><img width="30px" style="opacity: 30%;" src="../img/seta-voltar.png"></a>
         <div class="table-container">
+        <form action="alterar.php" method="post" target="_self">
         <table>
             <?php
             include_once('conexao.php');
@@ -38,7 +39,7 @@
             } else {
                 echo "<p>Erro na consulta de Turma: " . mysqli_error($conexao) . "</p>";
             }
-            
+
             if ($busca) {
                 echo "<tr>
                         <th>ID</th>
@@ -50,12 +51,11 @@
                 while($linha = mysqli_fetch_array($busca)){
                     echo 
                     "<tr>
-                        <td>" .$linha['Codigo']. "</td>
-                        <td>" .$linha['Aluno']. "</td>
-                        <td>" .$linha['Telefone']. "</td>
-                        <td>" .$linha['Email']. "</td>
-                        <td> <a class='alterar' href='#'>ALTERAR</a> </td>
-                        <td> <a class='excluir' href='#'>EXCLUIR</a> </td>
+                        <td><input class='id' type='text' name='Cod_Aluno' value='" . $linha['Codigo'] . "' readonly></td>
+                        <td><input type='text' name='Nome_Aluno' value='" . $linha['Aluno'] . "' readonly></td>
+                        <td><input type='text' name='Telefone' value='" . $linha['Telefone'] . "' readonly></td>
+                        <td><input type='text' name='Email' value='" . $linha['Email'] . "' readonly></td>
+                        <td><button class='submit-button' type='submit'>Editar</button></td>
                     </tr>";
                 }
             } else {
@@ -63,6 +63,7 @@
             }
             ?>
         </table>
+        </form>
         </div>
     </div>
 </body>
